@@ -1,0 +1,33 @@
+<div ng-include="consumoactual.menutemplate.url"></div>
+
+<div class="container" >	
+	  <table class="highlight">
+        <thead >
+          <tr>
+              <th>Fecha</th>
+              <th>Consumo</th>
+              <th>Costo</th>
+          </tr>
+        </thead>
+
+        <tbody >
+          <tr ng-repeat="n in consumo | filter: {mes: '11'||'12'}">
+            <td> {{n.mes}}/{{n.anio}}</td>
+            <td>{{n.kwh}} Kwh</td>
+            <td>$ {{n.costokwh}}</td>
+          </tr>
+      </table>
+     <div class="row">
+		<div class="input-field col s6" id="Efficient" ></div>
+		<div class="input-field col s6" id="EfficientDos" ></div>
+	</div> 
+ 
+<canvas id="bar" class="chart chart-bar"
+  chart-data="data" chart-labels="labels"> chart-series="series"
+</canvas>
+
+<a class="btn waves-effect waves-yellow red" type="button" value="Ver mi consumo detallado" href="/#!/detalleconsumo">Ver mi consumo detallado</a>
+
+</div>
+ 
+

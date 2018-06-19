@@ -1,0 +1,66 @@
+<div ng-include="detallesproyecto.menutemplate.url"></div>
+
+<div  class="container"> 
+
+    <div class="row">
+        <div class="col s12">
+          <div class="card white">
+            <div class="card-content black-text">
+              <span class="card-title">Proyecto: {{detalles.nombre}}</span>
+              <p>Para cumplir con las metas de este proyecto debes ahorrar un {{detalles.meta}}% , lo que significa que no puedes gastar más de $ {{meta}} mensuales</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12">
+          <div class="card white">
+            <div class="card-content black-text">
+              <span class="card-title">Estado de las metas de cada participante</span>
+              <p class="circulo"> </p>
+              <p>Significa que la disminucion del ahorro es igual o mayor a {{detalles.meta}}</p>
+              <p class="circulo_rojo"> </p>
+              <p>Significa que la disminucion del ahorro es menor a {{detalles.meta}}</p>
+              <table>
+        <thead>
+          <tr>
+              <th>Participante</th>
+              <th>Mes 1</th>
+              <th>Mes 2</th>
+              <th>Mes 3</th>
+              <th>Mes 4</th>
+              <th>Mes 5</th>
+              <th>Mes 6</th>
+              <th>Mes 7</th>
+              <th>Mes 8</th>
+              <th>Mes 9</th>
+              <th>Mes 10</th>
+              <th>Mes 11</th>
+              <th>Mes 12</th>
+              
+          </tr>
+        </thead>
+
+        <tbody ng-repeat="c in usuarios | limitTo : 1">
+          <tr ng-repeat="participante in conjuntoMeses" ng-if="c.nombre = participante.nombre">
+            <td > {{participante.nombre}}{{c.nombre}}</td>
+            <td ng-if="evaluarMes(participante.meses,11) >= 0"><p class="{{evaluarMes(participante.meses,11) > meta ? 'circulo_rojo':'circulo'}}"></p></td>
+            <td ><p ng-if="evaluarMes(participante.meses,12) >= 0" class="{{evaluarMes(participante.meses,12) > meta ? 'circulo_rojo':'circulo'}}"></p></td>
+            <td ><p ng-if="evaluarMes(participante.meses,01) >= 0" class="{{evaluarMes(participante.meses,01) > meta ? 'circulo_rojo':'circulo'}}"></p></td>
+            <td ><p ng-if="evaluarMes(participante.meses,04) >= 0" class="{{evaluarMes(participante.meses,04) > meta ? 'circulo_rojo':'circulo'}}"></p></td>
+            <td ><p ng-if="evaluarMes(participante.meses,05) >= 0" class="{{evaluarMes(participante.meses,05) > meta ? 'circulo_rojo':'circulo'}}"></p></td>
+            <td ><p ng-if="evaluarMes(participante.meses,06) >= 0" class="{{evaluarMes(participante.meses,06) > meta ? 'circulo_rojo':'circulo'}}"></p></td>
+            <td ><p ng-if="evaluarMes(participante.meses,07) >= 0" class="{{evaluarMes(participante.meses,07) > meta ? 'circulo_rojo':'circulo'}}"></p></td>
+            <td ><p ng-if="evaluarMes(participante.meses,08) >= 0" class="{{evaluarMes(participante.meses,08) > meta ? 'circulo_rojo':'circulo'}}"></p></td>
+            <td ><p ng-if="evaluarMes(participante.meses,09) >= 0" class="{{evaluarMes(participante.meses,09) > meta ? 'circulo_rojo':'circulo'}}"></p></td>
+            <td ><p ng-if="evaluarMes(participante.meses,10) >= 0" class="{{evaluarMes(participante.meses,10) > meta ? 'circulo_rojo':'circulo'}}"></p></td>
+            <td ><p ng-if="evaluarMes(participante.meses,02) >= 0" class="{{evaluarMes(participante.meses,11) > meta ? 'circulo_rojo':'circulo'}}"></p></td>
+            <td ><p ng-if="evaluarMes(participante.meses,03) >= 0" class="{{evaluarMes(participante.meses,12) > meta ? 'circulo_rojo':'circulo'}}"></p></td>
+          </tr>
+        </tbody>
+      </table>
+ 
+            </div>
+          </div>
+        </div>
+      </div>
+

@@ -1,0 +1,41 @@
+<div ng-include="aportes.menutemplate.url"></div>
+<h3 style="text-align: center;">Aportes para proyectos</h3>
+<p style="text-align: center;">Se pueden realizar aportes monetarios, de materiales y de mano de obra todos los aportes serán bien recibidos.</p>
+<p style="text-align: center;">Todos los aportes deben ser ingresados en su equivalente en dinero</p>
+
+<div class="container">
+	<form class= "col s12">
+		<div class="row">
+			<div  ng-controller="ViewCtrl" class="input-field col s6">
+		        <input type="text" list="proyectos" name="proyectos" ng-model="proyecto" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Seleccionar proyecto">
+		        <datalist id="proyectos">
+		        	<option ng-repeat="p in proyectos" value="{{p.nombre}}">{{p.idproyecto}}</option>
+		        </datalist>
+		        <label for="proyectos"><strong>Seleccionar proyecto</strong></label>
+      		</div>
+      		 <!-- <div ng-controller="ViewCtrl" class="input-field col s6">
+		        <input type="text" list="proyecto" name="proyecto" ng-model="proyecto" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Seleccionar proyecto">
+		        <datalist id="proyecto">
+		          <option ng-repeat="proyecto in proyectos" value="{{proyecto.nombre}}"></option>
+		        </datalist>
+		         <label for="proyecto"><strong>Proyecto</strong></label>
+		      </div> -->
+                 
+      		<div class="input-field col s6">
+      			<input type="number" name="dinero" ng-model="dinero" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Ingresar cantidad de dinero a aportar">
+      			<label for="dinero"><strong>Aporte en dinero</strong></label>
+      		</div>
+      		<div class="input-field col s6">
+      			<input type="number" name="materiales" ng-model="materiales" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Ingresar cantidad en dinero de materiales a aportar">
+      			<label for="proyectos"><strong>Aporte en materiales</strong></label>
+      		</div>
+      		<div class="input-field col s6">
+      			<input type="number" name="trabajo" ng-model="trabajo" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Ingresar cantidad en dinero de horas hombre a aportar">
+      			<label for="proyectos"><strong>Aporte en mano de obra</strong></label>
+      		</div>
+      		<div>
+      			<input class="btn waves-effect waves-yellow red" type="button" value="Aportar a proyecto" ng-click="insert()">
+      		</div>
+		</div>
+	</form>
+</div>

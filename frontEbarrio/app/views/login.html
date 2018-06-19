@@ -1,0 +1,39 @@
+<div class="container">
+  <section id="content">
+    <form action="">
+      <h1>Ingresa a E-Barrio</h1>
+      <div>
+        <input type="text" placeholder="Username" required="" id="username" ng-model="user" />
+      </div>
+      <div>
+        <input type="password" placeholder="Password" required="" id="password" ng-model="pswd"/>
+      </div>
+      <div class="alert" role="alert" ng-show="errorMsg">{{errorMsg}}</div>
+      <div>    
+        <input type = "submit" class= "waves-effect waves-red green btn" value = "LOGIN" ng-click = "insertdata()" id = "butt"/>        
+      </div>
+    </form>
+  </section>
+</div>
+
+
+<!-- <form name="loginUserForm">
+  <fieldset>
+    <legend>Formulario de ingreso a Ebarrio</legend>
+    <div class="row">
+      <div ng-show="flash">
+        <div data-alert class="alert-box alert roud">{{flash}}</div>
+      </div>
+      <div class="large-12 columns">
+        <label>Email</label>
+        <input type="email" required placeholder="Introduce tu email" ng-model="user.email">
+      </div>
+      <div class="large-12 columns">
+        <label>Password</label>
+        <input type="password" required placeholder="Ingresa tu password" ng-model="user.password">
+      </div>
+      <button type="submit" ng-disable="!loginUserForm.$valid" ng-click="login(user)" class="button expand round">Login</button>
+    </div>
+  </fieldset>
+</form>
+ -->

@@ -1,0 +1,59 @@
+	<h3 style="text-align: center;">Formulario de Registro</h3>
+	 <div   class="row">
+<!-- 	    <form class="col s12">
+	      <div class="row">
+	        <div class="input-field col s6">
+	          <input type="text" ng-model="usuario.nombre" name="nombre" class="validate">
+	          <label for="nombre">Nombre</label>
+	        </div>
+	        <div class="input-field col s6">
+	          <input type="text" ng-model="usuario.apellido" name="apellido" class="validate">
+	          <label for="apellido">Apellido</label>
+	        </div>
+	      </div>
+	      <div class="row">
+	        <div class="input-field col s6">
+	          <input type="password" ng-model="usuario.contrasena" name="contrasena" class="validate">
+	          <label for="contrasena">Contraseña</label>
+	        </div>
+	        <div class="input-field col s6">
+	          <input  type="email" ng-model="usuario.correo" name="correo" class="validate">
+	          <label for="correo">Email</label>
+	        </div>
+	         <div class="input col s6">
+      			<input class="btn waves-effect waves-yellow red" type="button" value="Registro" ng-click="insert($scope.usuario)">
+      		</div>
+      		<div class="input col s6">
+      			<a class="btn waves-effect waves-red green" href="/">Volver</a>
+      		</div>
+	      
+	      </div>
+	    </form> -->
+	    <div class="container">
+  <form class="col s12">
+    <div class="row">
+    	<div class="input-field col s6">
+        <input type="text" ng-model="nombre" name="nombre" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Nombre de usuario">
+        <label for="nombre"><strong>Nombre</strong></label>
+      </div>
+      <!-- <div class="input-field col s6">
+        <input type="text" ng-model="usuario.apellido" name="apellido" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Apellido de usuario">
+        <label for="apllido"><strong>Apellido</strong></label>
+      </div> -->
+      <div class="input-field col s6">
+        <input type="password" ng-model="contrasena" name="contrasena" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Indicar contraseña">
+        <label for="contrasena"><strong>Contraseña</strong></label>
+      </div>
+      <div class="input-field col s6">
+        <input type="email" ng-model="correo" name="correo" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Indicar correo">
+        <label for="correo"><strong>Correo</strong></label> 
+      </div>
+      <div class="input col s6">
+      <!-- <input class="btn waves-effect waves-yellow red" type="button" value="Agregar Proyecto" ng-click="submit($scope.proyecto)"> -->
+      <input class="btn waves-effect waves-yellow red" type="button" value="Registro" ng-click="insert()">
+      </div>
+    </div>
+  </form>
+</div>
+	  </div>
+

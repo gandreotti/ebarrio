@@ -1,0 +1,27 @@
+<div ng-include="proyectos.menutemplate.url"></div>
+<!-- <p ng-show="$parent.settings.success">{{$parent.settings.success}}</p> -->
+  <div ng-controller="ViewCtrl" class="container">
+  <div class="row">
+  <table class="bordered striped">
+        <thead>
+          <tr>
+              <td>Nombre proyecto
+          </td>
+          <td> Estado proyecto</td>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr ng-repeat="p in proyectos | filter: {estado: 'En proceso fase 2'} ">
+            <td>{{p.nombre}}</td>
+            <td>{{p.estado}}</td>
+            <td><a ng-href="#!/detallesproyecto/{{p.idproyecto}}">Detalles<i class="material-icons left">info</i> </a>{{p.id}}</td>
+            <!-- <td><a ng-click="update(p.idproyecto)">Aprobar<i class="material-icons left">check</i> </a>
+                     </td>
+            <td><a href="#!/editar/{{p.idproyecto}}">Editar<i class="material-icons left">edit</i> </a>
+                    <a ng-click="submit(p.idproyecto)"></td> -->
+          </tr>
+        </tbody>
+      </table>
+      </div>
+</div>

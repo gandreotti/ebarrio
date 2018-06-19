@@ -1,0 +1,100 @@
+<div ng-include="editar.menutemplate.url"></div>
+<h3 style="text-align: center;">Formulario de Postulación de Proyectos</h3>
+ <!-- <p ng-show="$parent.settings.success" class="alert alert-success">{{$scope.settings.success}}</p> --> 
+ <div ng-controller="EditCtrl" class="container">
+  <form class="col s12">
+    <div class="row">
+    	<div class="input-field col s6">
+        <input type="text" ng-model="proyecto.razonsocial" name="razonsocial" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Señalar el nombre de la institución que presenta el proyecto.">
+        <label for="razonsocial"><strong>Nombre Institución</strong></label>
+      </div>
+      <div class="input-field col s6">
+        <input type="text" ng-model="proyecto.rutsocial" name="rutsocial" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Señalar Rol Único Tributario de la institución que presenta el proyecto">
+        <label for="rutsocial"><strong>Rut Institución</strong></label>
+      </div>
+      <div class="input-field col s6">
+        <input type="text" ng-model="proyecto.organizacion" name="organizacion" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Señalar si corresponde a una corporación, fundación o establecimiento educacional">
+        <label for="organizacion"><strong>Tipo de Institución</strong></label>
+      </div>
+      <div class="input-field col s6">
+        <input type="date" ng-model="proyecto.fechasolicitud" name="fechasolicitud" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Señalar la fecha en la cual se presenta el proyecto">
+        <!-- <label for="fechasolicitud"><strong>Fecha Postulación</strong></label> -->
+      </div>
+      <div class="input-field col s6">
+        <input type="text" ng-model="proyecto.nombre" name="nombre" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Indicar un nombre de fantasía que permita identificar el proyecto. Idealmente con pocas palabras">
+        <label for="nombre"><strong>Nombre del Proyecto</strong></label>
+      </div>
+      <div class="input-field col s6">
+        <input type="text" list="tarifa"  ng-model="proyecto.tarifa" name="tarifa" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="¿Se cobra alguna tarifa a los beneficiarios del proyecto?">
+        <datalist id="tarifa">
+          <option value="Si"></option>
+          <option value="No"></option>
+        </datalist>
+        <label for="tarifa"><strong>Cobro a Participantes</strong></label>
+      </div>
+      <div class="input-field col s6">
+        <input type="text" list="destinatario" ng-model="proyecto.destinatario" name="destinatario" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Destinatario/a del  proyecto">
+        <datalist id="destinatario">
+          <option value="Personas de escasos recursos"></option>
+          <option value="Personas en situación de discapacidad"></option>
+          <option value="Personas en riesgo o afecta a adicción de alcohol y/o drogas"></option>
+        </datalist>
+        <label for="destinatario"><strong>Destinatario/a del  proyecto</strong></label>
+      </div>
+      <div class="input-field col s6">
+        <input type="number" ng-model="proyecto.beneficiariodirecto" name="beneficiariodirecto"  min="1" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Personas que son beneficiadas directamente por el proyecto ej: numero de profesores capacitadas">
+        <label for="beneficiariodirecto"><strong>Beneficiarios Directos</strong></label>
+      </div>
+      <div class="input-field col s6">
+        <input type="number" ng-model="proyecto.beneficiarioindirecto" name="beneficiarioindirecto"  min="1" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Personas que son beneficiadas indirectamente por el proyecto ej: personas que integran la comunidad educativa">
+        <label for="beneficiarioindirecto"><strong>Beneficiarios Indirectos</strong></label>
+      </div>
+      <div class="input-field col s6">
+        <input type="number" ng-model="proyecto.dimensiones" name="dimensiones"  min="0" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Para el caso de proyectos que contemplen construir o habilitar infraestructura, es obligación señalar el número de metros cuadrados (M2) de ésta. En caso contrario ingresar 0">
+        <label for="dimensiones"><strong>Dimensiones del Proyecto</strong></label>
+      </div>
+       <div class="input-field col s6">
+        <input type="number" name="duracion" ng-model="proyecto.duracion"  min="1" max="60" step="1" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Señalar la duración, en meses, del proyecto">
+        <label for="duracion"><strong>Duracion en Meses</strong></label>
+      </div>
+      <div class="input-field col s6">
+        <input type="text" list="region" name="region" ng-model="proyecto.region" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Especificar región">
+        <datalist id="region">
+          <option  ng-repeat="region in regiones" value="{{region.nombre}}"></option>
+        </datalist>
+         <label for="region"><strong>Región</strong></label>
+      </div>
+      <div class="input-field col s6">
+     <input type="text" list="estado" name="estado" ng-model="proyecto.estado" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="El estado del proyecto por defecto es Postulación fase 1" disabled="Postulación fase 1">
+        <datalist id="estado">
+          <option value="Postulación fase 1"></option>
+          <option value="En proceso fase 1"></option>
+          <option value="Terminado fase 1"></option>
+          <option value="Adjudicado fase 2"></option>
+        </datalist>
+         <label for="estado"><strong>Estado: Postulacion fase 1</strong></label>
+      </div>
+      <div class="input-field col s6">
+        <input type="number" name="meta" ng-model="proyecto.ahorro"  min="0" max="100" step="1" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Indicar el porcentaje de ahorro que se prentede lograr">
+        <label for="meta"><strong>Porcentaje ahorro</strong></label>
+      </div>
+      <div class="input-field col s6">
+        <input  type="number" data-length="500" ng-model="proyecto.dinero" name="dinero" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Aporte con que cuenta (dinero que posee al día de hoy)">
+        <label for="dinero"><strong>Capital Disponible</strong></label>
+      </div>
+      <div class="input-field col s6">
+        <input type="number" name="aporte" ng-model="proyecto.aporte" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Monto solicitado para donaciones (dinero extra que necesita para el proyecto">
+        <label for="aporte"><strong>Capital Solicitado</strong></label>
+      </div>
+      <div class ="input col s6">
+      <a class="waves-effect waves-light indigo btn"  target="_blank" href="https://www.google.com/maps/d/u/1/edit?authuser=1&mid=15tSC9UaEpqv8Ifqcxjff3DOZxF0&ll=-33.033426016470415%2C-71.57579894999998&z=13" >Agregar ubicacion proyectos</a>
+      </div>
+      <div class="input col s6">
+      <input class="btn waves-effect waves-yellow red" type="button" value="Agregar Proyecto" ng-click="submit($scope.proyecto)">
+      </div>
+    </div>
+    <div class ="input-field col s4">
+      
+    </div>
+  </form>
+</div>

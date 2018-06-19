@@ -1,0 +1,19 @@
+<div class="container">
+  <section id="content">
+    <form action="">
+      <h1>Ingresa a E-Barrio</h1>
+      <div>
+        <input type="text" placeholder="Username" required="" id="username" ng-model="user" />
+      </div>
+      <div>
+        <input type="password" placeholder="Password" required="" id="password" ng-model="pswd"/>
+      </div>
+      <div class="alert" role="alert" ng-show="errorMsg">{{errorMsg}}</div>
+      <div>    
+
+        <input type = "button" class= "waves-effect waves-red green btn" value = "LOGIN" ng-click = "insertdata()" id = "butt"/>        
+      </div>
+    </form>
+  </section>
+</div>
+

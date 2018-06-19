@@ -1,0 +1,152 @@
+<div ng-controller="DetallesCtrl" >
+	<div ng-include="crearproyecto.menutemplate.url"></div>
+</div>
+<div class="container">
+	
+        
+          <div class="card white">
+            <div class="card-content black-text">
+              	<span class="card-title">Detalles proyecto: {{proyectos.nombre}}</span>
+              	<div class="row">	</div>
+              		<div class="card blue-grey darken-1">
+            			<div class="card-content white-text">
+			              	<span class="card-title">Información Responsable postulación</span>
+			              	<div class="input-field col s12">
+								<p>Identificador proyecto:{{proyectos.idproyecto}}</p> 
+						  	</div>
+							<div class="input-field col s12">
+								<p>Responsable de proyecto: {{proyectos.razonsocial}}</p>
+							</div>
+							<div class="input-field col s12">
+								<p>Rut Responsable: {{proyectos.rutsocial}}</p>
+							</div>
+							<div class="input-field col s12">
+								<p>Tipo de organizacion: {{proyectos.organizacion}}</p>
+							</div>
+							<div class="input-field col s12">
+								<p>Telefono de contacto: {{proyectos.telefono}}</p>
+							</div>
+							<div class="input-field col s12">
+								<p>Mail de contacto: {{proyectos.usuario}}</p>
+						</div>
+           			 </div>
+            
+          		</div>
+          	
+          </div>
+      
+          		<div class="card blue-grey darken-1">
+            			<div class="card-content white-text">
+			              	<span class="card-title">Información Proyecto</span>
+			              	<div class="input-field col s12">
+								<p>Proyecto contempla cobro a beneficiarios? : {{proyectos.tarifa}}</p>
+							</div>
+							<div class="input-field col s12">
+								<p>Tipo de destinatarios del proyecto: {{proyecto.destinatario}}</p>
+							</div>
+							<div class="input-field col s12">
+								<p>Número de beneficiarios directos con el proyecto: {{proyectos.beneficiariodirecto}} Personas</p>
+							</div>
+							<div class="input-field col s12">
+								<p>Número de beneficiarios indirectos con el proyecto: {{proyectos.beneficiarioindirecto}} Personas</p></div>
+							<div class="input-field col s12">
+								<p>Cantida de metros cuadras que se pretende construir: {{proyectos.dimensiones}} Metros cuadrados</p>
+							</div>
+							<div class="input-field col s12">
+								<p>Duración del proyecto:{{proyectos.duracion}} meses</p>
+							</div>
+							<div class="input-field col s12">
+								<p>Ubicación del proyecto:{{proyectos.region}}</p>
+							</div>
+							<div class="input-field col s12">
+								<p>Meta de ahorro propuesta: {{proyectos.meta}} %</p>
+							</div>
+           			 </div>
+            
+          		</div>
+          		<div class="card blue-grey darken-1">
+            			<div class="card-content white-text">
+			              	<span class="card-title">Información Costos proyecto</span>
+			              	<div class="input-field col s12">
+						<p>Capital disponible para realizar el proyecto: ${{proyectos.dinero}}</p>
+							</div>
+							<div class="input-field col s12">
+						<p>Dinero faltante para realizar el proyecto:${{proyectos.aporte}}</p>
+								</div>
+							<div class="input-field col s12">
+								<p>Gasto en Recursos humanos: ${{proyectos.manodeobra}}</p>
+									</div>
+					<div class="input-field col s12">
+						<p>Gasto en materiales: ${{proyectos.materiales}}</p>
+					</div>
+	           			 </div>
+            
+          		</div>
+		
+		
+		
+	</div>
+            </div>
+           
+         </div>
+        
+      </div>
+	
+	<!-- <h3 style="color: green">Detalles proyecto: {{proyectos.nombre}}</h3>
+	<div class="row">
+		<div class="input-field col s12">
+			<p>Identificador proyecto:{{proyectos.idproyecto}}</p> 
+		</div>
+		<div class="input-field col s12">
+		<p>Responsable de proyecto: {{proyectos.razonsocial}}</p>
+		</div>
+		<div class="input-field col s12">
+			<p>Rut Responsable: {{proyectos.rutsocial}}</p>
+		</div>
+		<div class="input-field col s12">
+			<p>Tipo de organizacion: {{proyectos.organizacion}}</p>
+		</div>
+		<div class="input-field col s12">
+			<p>Telefono de contacto: {{proyectos.telefono}}</p>
+		</div>
+		<div class="input-field col s12">
+			<p>Mail de contacto: {{proyectos.usuario}}</p>
+		</div>
+		<div class="input-field col s12">
+			<p>Proyecto contempla cobro a beneficiarios? : {{proyectos.tarifa}}</p>
+		</div>
+		<div class="input-field col s12">
+			<p>Tipo de destinatarios del proyecto: {{proyecto.destinatario}}</p>
+		</div>
+		<div class="input-field col s12">
+			<p>Número de beneficiarios directos con el proyecto: {{proyectos.beneficiariodirecto}} Personas</p>
+		</div>
+		<div class="input-field col s12">
+		<p>Número de beneficiarios indirectos con el proyecto: {{proyectos.beneficiarioindirecto}} Personas</p></div>
+		<div class="input-field col s12">
+			<p>Cantida de metros cuadras que se pretende construir: {{proyectos.dimensiones}} Metros cuadrados</p>
+		</div>
+		<div class="input-field col s12">
+			<p>Duración del proyecto:{{proyectos.duracion}} meses</p>
+		</div>
+		<div class="input-field col s12">
+			<p>Ubicación del proyecto:{{proyectos.region}}</p>
+		</div>
+		<div class="input-field col s12">
+			<p>Meta de ahorro propuesta: {{proyectos.meta}} %</p>
+		</div>
+		<div class="input-field col s12">
+			<p>Capital disponible para realizar el proyecto: ${{proyectos.dinero}}</p>
+		</div>
+		<div class="input-field col s12">
+			<p>Dinero faltante para realizar el proyecto:${{proyectos.aporte}}</p>
+		</div>
+		<div class="input-field col s12">
+			<p>Gasto en Recursos humanos: ${{proyectos.manodeobra}}</p>
+		</div>
+		<div class="input-field col s12">
+			<p>Gasto en materiales: ${{proyectos.materiales}}</p>
+		</div>
+	</div> -->
+
+</div>

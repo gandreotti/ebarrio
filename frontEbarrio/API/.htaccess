@@ -1,0 +1,25 @@
+Options FollowSymLinks
+<IfModule mod_rewrite.c>
+	#Activación de Rewrite
+	RewriteEngine on
+
+	RewriteCond $1 !^(index\.php|resources|rebots\.txt)
+
+	#Verificamos si es un directorio o un archivo
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteCond %{REQUEST_FILENAME} !-f
+
+	#En caso de no existir redireccionamos
+	RewriteRule ^(.*)$ index.php/$1 [L,QSA]
+
+</IfModule>
+
+<IfModule !mod_rewrite.c>
+	ErrorDocument 404 /index.php
+</IfModule>
+
+<ifModule mod_headers.c>
+    Header always set Access-Control-Allow-Origin: "*"
+    Header always set Access-Control-Allow-Methods "POST, GET, PUT, DELETE, OPTIONS"
+    Header always set Access-Control-Allow-Headers "X-Requested-With, Cache-Control, Content-Type, Auth-Key, Client-Service, User-Id, Authorization, X-Api-Key"
+</ifModule>

@@ -1,0 +1,26 @@
+<div ng-init="proyecto()" ng-include="casillaproyectos.menutemplate.url"></div>
+<h1 style="text-align: center;">Lista proyectos en postulación</h1>
+<div class="container">
+<table class="bordered striped">
+        <thead>
+          <tr>
+              <td>Nombre proyecto
+          </td>
+          <td> Estado proyecto</td>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr ng-repeat="p in proyectos | filter: {estado: 'En Postulación fase 1'} " >
+            <td>{{p.nombre}}</td>
+            <td>{{p.estado}}</td>
+            <td><a ng-href="#!/detallecasilla/" ng-click="verProyecto(p.idproyectos)">Detalles<i class="material-icons left">info</i> </a>{{p.id}}</td>
+             <!-- <a class="waves-effect waves-teal btn-flat">Button</a> con esto puedo hacer esto mas bonito-->
+            <td><a class="waves-effect waves-teal btn-flat" ng-click="update(p.idproyectos)">Aprobar<i class="material-icons left">check</i> </a>
+                     </td>
+           <!--  <td><a href="#!/editar/{{p.idproyectos}}">Editar<i class="material-icons left">edit</i> </a>
+                    <a ng-click="submit(p.idproyectos)"></td> -->
+          </tr>
+        </tbody>
+      </table>
+</div>

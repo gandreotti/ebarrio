@@ -1,0 +1,18 @@
+<div ng-init="consumo()" ng-include="detalleconsumo.menutemplate.url"></div>
+<div class="container">
+<canvas id="bar" class="chart chart-bar"
+  chart-data="data" chart-labels="labels"> chart-series="series"
+</canvas>
+<div class="row">
+        <div class="col s12 m6">
+          <div class="card blue darken-1">
+            <div class="card-content white-text">
+              <span class="card-title">Consumo actual del mes</span>
+              <h3>$ {{suma}}</h3>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+</div>

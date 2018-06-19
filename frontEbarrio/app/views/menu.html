@@ -1,0 +1,26 @@
+
+  <nav>
+    <div class="nav-wrapper green darken-3">
+        
+      <ul class="left hide-on-med-and-down">
+        <li><a onclick="Materialize.toast('Inicio', 4000,'rounded')" ng-href="/#!/inicio">Inicio</a></li>
+        <li><a   ng-click="destroy()" ng-href="/#!">Salir</a></li>
+          <!-- <li><a href="/hazte_capacitador">Hazte Capacitador</a></li> -->
+      </ul>
+           <!-- Dropdown Trigger -->
+      <ul  class="right hide-on-med-and-down">
+         <li><a onclick="Materialize.toast('Huella de carbono', 4000,'rounded')" ng-href="/#!/hcarbono">¿Qué es la huella de carbono?</a></li>
+        <li><a ng-href="/#!/proyectos">Proyectos</a></li>
+        <li><a href="/#!/consumoactual">Mi Consumo</a></li>
+
+        
+      </ul>
+
+    </div>
+  </nav>
+
+<div ng-controller="LoginCtrl">
+<p>Usuario : {{usuario}}</p>
+
+</div>
+<div ng-controller="LoginadminCtrl"></div>

@@ -1,0 +1,103 @@
+<div ng-init="consumo()" ng-include="consumohistorico.menutemplate.url"></div>
+<div class="container">	
+	<div class="row">
+        <div class="col s12">
+          <div class="card white ">
+            <div class="card-content black-text">
+              <span class="card-title">Cliente: {{consumos.ncliente}}</span>
+              <div class="row">
+				<div class="input-field col s6">
+						<p>Empresa Distribuidora : {{consumos.distribuidora}}</p>
+				</div>	
+				<div class="input-field col s6">
+						<p>Tipo de inmueble: {{consumos.usuario}}</p>
+				</div>	
+				<div class="input-field col s6">
+						<p>Dirección : {{consumos.direccion}}</p>
+				</div>	
+				<div class="input-field col s6">
+						<p>Número de medidor: {{consumos.nmedidor}}</p>
+				</div>	
+			</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12">
+          <div class="card white ">
+            <div class="card-content black-text">
+              <span class="card-title">Consumo ultimos seis meses</span>
+              <div class="row">	
+              <div class="input-field col s4">
+						<p>Fecha de medicion: {{consumos.mes_uno | date:'dd/MM/yyyy'}} </p>
+					</div>
+					<div class="input-field col s4">
+					   <p> Consumo mes: {{consumos.consumo_uno}} kwh</p>
+					</div>
+					<div class="input-field col s4">
+					   <p> Gasto: $ {{consumos.boleta_uno }}</p>
+					</div>
+					<div class="input-field col s4">   
+						<p>Fecha de medicion: {{consumos.mes_dos | date:'dd/MM/yyyy'}}</p>
+					</div>
+					<div class="input-field col s4">
+					   <p> Consumo mes: {{consumos.consumo_dos}} kwh</p>
+					</div>
+					<div class="input-field col s4">
+					   <p> Gasto: $ {{consumos.boleta_dos}}</p>
+					</div>
+					<div class="input-field col s4">
+						<p>Fecha de medicion: {{consumos.mes_tres | date:'dd/MM/yyyy'}} </p>
+					</div>
+					<div class="input-field col s4">
+					  <p>Consumo mes: {{consumos.consumo_tres}} kwh</p>
+					</div> 
+					<div class="input-field col s4">
+					   <p> Gasto: $ {{consumos.boleta_tres}}</p>
+					</div>
+					<div class="input-field col s4">
+						<p>Fecha de medicion: {{consumos.mes_cuatro | date:'dd/MM/yyyy'}} </p>
+					</div>
+					<div class="input-field col s4">
+					  <p> Consumo mes: {{consumos.consumo_cuatro}} kwh </p>
+					</div>
+					<div class="input-field col s4">
+					   <p> Gasto: $ {{consumos.boleta_cuatro}}</p>
+					</div>
+					<div class="input-field col s4">  
+						<p>Fecha de medicion: {{consumos.mes_cinco | date:'dd/MM/yyyy'}} </p>
+					</div>
+					<div class="input-field col s4">
+					  <p> Consumo mes: {{consumos.consumo_cinco}} kwh</p>
+					</div>
+					<div class="input-field col s4">
+					   <p> Gasto: $ {{consumos.boleta_cinco}}</p>
+					</div>
+					<div class="input-field col s4">
+						<p>Fecha de medicion: {{consumos.mes_seis | date:'dd/MM/yyyy'}} </p>
+					</div>
+					<div class="input-field col s4">
+					  <p>Consumo mes: {{consumos.consumo_seis}} kwh</p>
+					</div>
+					<div class="input-field col s4">
+					   <p> Gasto: $ {{consumos.boleta_seis}}</p>
+					</div>
+					<br/>		
+					<div class="input-field col s4">
+					   <p style="font-weight: bold;">Consumo promedio : {{prom}}</p>
+					</div>
+					<div class="input-field col s4">
+					   <button ng-click="guardarConsumo()">Guardar promedio historico</button>
+					</div>
+					<div class="input-field col s12">
+					   <canvas id="bar" class="chart chart-bar"
+  						chart-data="data" chart-labels="labels"> chart-series="series"
+					   </canvas>
+					</div>
+					</div>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>

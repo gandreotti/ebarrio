@@ -1,0 +1,112 @@
+<div ng-controller="CasillaproyectosCtrl"> 
+	<div ng-include="detallecasilla.menutemplate.url"></div>
+<div class="container" ng-repeat="d in detalles | limitTo : 1">
+
+
+      <div class="row">
+        <div class="col s12">
+          <div class="card white">
+            <div class="card-content black-text">
+              <span class="card-title">Detalles Proyecto: {{d.nombre}}</span>
+              <div class="row">
+              <div class="input-field col s6">
+					<p style="font-weight:bold">Identificador proyecto:</p>
+					<p style="color: blue">{{d.idproyectos}}</p>
+			  </div>
+			  <div class="input-field col s6">
+					<p style="font-weight:bold">Responsable de proyecto: </p>
+					<p>{{d.razonsocial}}</p>
+			  </div>
+			  <div class="input-field col s6">
+					<p style="font-weight:bold">Tipo de organizacion: </p>
+					<p style="color: blue"> {{d.organizacion}}</p>
+			  </div>
+			  <div class="input-field col s6">
+					<p style="font-weight:bold">Telefono de contacto: </p>
+					<p style="color: blue">{{d.telefono}}</p>
+			  </div>
+			  <div class="input-field col s6">
+					<p style="font-weight:bold">Mail de contacto: </p>
+					<p style="color: blue">{{d.usuario}}</p>
+			  </div>		
+			  <div class="input-field col s6">
+					<p style="font-weight:bold">Proyecto contempla cobro a beneficiarios?: </p>
+					<p style="color: blue">{{d.tarifa}}</p>
+			  </div>	
+			  <div class="input-field col s6">
+					<p style="font-weight:bold">Tipo de destinatarios del proyecto: </p>
+					<p style="color: blue">{{d.destinatario}}</p>
+			  </div>
+			  <div class="input-field col s6">
+					<p style="font-weight:bold">Número de beneficiarios directos con el proyecto:</p>
+					<p style="color: blue"> {{d.beneficiariodirecto}}</p>
+			  </div>	
+			  <div class="input-field col s6">
+					<p style="font-weight:bold">Número de beneficiarios indirectos con el proyecto: </p>
+					<p style="color: blue">{{d.beneficiarioindirecto}}</p>
+			  </div>
+			  <div class="input-field col s6">
+					<p style="font-weight:bold">Cantida de metros cuadras que se pretende construir:</p>
+					<p style="color: blue"> {{d.dimensiones}}</p>
+			  </div>
+			  <div class="input-field col s6">
+					<p style="font-weight:bold">Duración del proyecto:</p>
+					<p style="color: blue">{{d.duracion}} meses</p>
+			  </div>
+			  <div class="input-field col s6">
+					<p style="font-weight:bold">Ubicación del proyecto:</p>
+					<p style="color: blue">{{d.region}}</p>
+			  </div>
+			  <div class="input-field col s6">
+					<p style="font-weight:bold">Meta de ahorro propuesta:</p>
+					<p style="color: blue"> {{d.meta}} %</p>
+			  </div>
+			  <div class="input-field col s6">
+					<p style="font-weight:bold">Capital disponible para realizar el proyecto: </p>
+					<p style="color: blue">$ {{d.dinero}}</p>
+			  </div>
+			   <div class="input-field col s6">
+					<p style="font-weight:bold">Dinero faltante para realizar el proyecto:</p>
+					<p style="color: blue">$ {{d.aporte}}</p>
+			  </div>
+			   <div class="input-field col s6">
+					<p style="font-weight:bold">Gasto en Recursos humanos: </p>
+					<p style="color: blue">$ {{d.manodeobra}}</p>
+			  </div>
+			   <div class="input-field col s6">
+					<p style="font-weight:bold">Gasto en materiales:</p>
+					<p style="color: blue"> $ {{d.materiales}}</p>
+			  </div>
+
+            </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+            
+
+	<!-- <h3 style="color: green">Detalles proyecto: {{d.nombre}}</h3>
+	<p>Identificador proyecto:{{d.idproyectos}}</p> 
+	<p>Responsable de proyecto: {{d.razonsocial}}</p>
+	<p>Rut Responsable: {{d.rutsocial}}</p>
+	<p>Tipo de organizacion: {{d.organizacion}}</p>
+	<p>Telefono de contacto: {{d.telefono}}</p>
+	<p>Mail de contacto: {{d.usuario}}</p>
+	<p>Proyecto contempla cobro a beneficiarios? : {{d.tarifa}}</p>
+	<p>Tipo de destinatarios del proyecto: {{d.destinatario}}</p>
+	<p>Número de beneficiarios directos con el proyecto: {{d.beneficiariodirecto}}</p>
+	<p>Número de beneficiarios indirectos con el proyecto: {{d.beneficiarioindirecto}}</p>
+	<p>Cantida de metros cuadras que se pretende construir: {{d.dimensiones}}</p>
+	<p>Duración del proyecto:{{d.duracion}} meses</p>
+	<p>Ubicación del proyecto:{{d.region}}</p>
+	<p>Meta de ahorro propuesta: {{d.meta}} %</p>
+	<p>Capital disponible para realizar el proyecto: ${{d.dinero}}</p>
+	<p>Dinero faltante para realizar el proyecto:${{d.aporte}}</p>
+	<p>Gasto en Recursos humanos: ${{d.manodeobra}}</p>
+	<p>Gasto en materiales: ${{d.materiales}}</p>
+ -->
+</div>
+</div>
+
+

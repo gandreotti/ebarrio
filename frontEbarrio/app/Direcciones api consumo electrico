@@ -1,0 +1,19 @@
+//MENSUAL
+https://api.mlab.com/api/1/databases/efficientmdb/collections/ConsumoMes?apiKey=7K2Y6doZUobEqRHLROy1D26_rHQOL89B
+
+//DIARIO
+https://api.mlab.com/api/1/databases/efficientmdb/collections/ConsumoDia?apiKey=7K2Y6doZUobEqRHLROy1D26_rHQOL89B
+
+//TEMPORAL
+https://api.mlab.com/api/1/databases/efficientmdb/collections/ConsumoTemp?apiKey=7K2Y6doZUobEqRHLROy1D26_rHQOL89B
+
+//CONDENSACION
+https://api.mlab.com/api/1/databases/efficientmdb/collections/Condensacion?apiKey=7K2Y6doZUobEqRHLROy1D26_rHQOL89B
+
+//HISTORICO
+https://api.mlab.com/api/1/databases/efficientmdb/collections/HistoricoCondensacion?apiKey=7K2Y6doZUobEqRHLROy1D26_rHQOL89B
+
+//HISTORICO QUERY
+https://api.mlab.com/api/1/databases/efficientmdb/collections/HistoricoCondensacion?q={"fecha":"25/05/17"}&apiKey=7K2Y6doZUobEqRHLROy1D26_rHQOL89B
+
+https://api.mlab.com/api/1/databases/efficientmdb/collections/ConsumoDia?q={"nombre":"Franco"}&apiKey=7K2Y6doZUobEqRHLROy1D26_rHQOL89B

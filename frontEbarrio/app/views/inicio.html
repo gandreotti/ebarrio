@@ -1,0 +1,58 @@
+<div ng-include="inicio.menutemplate.url"></div>
+<div class="container"> 
+
+  <div class="slider">
+    <ul class="slides">
+      <li>
+        <img class="responsive-img" src="images/plaza.jpg"> <!-- random image -->
+        <div class="caption center-align ">
+          <h3>Creación de nuevas plazas para la comunidad</h3>
+          <h5 class="light white-text text-lighten-3 ">Antiguo terreno utilizado como basural, ahora es un punto de reunión.</h5>
+        </div>
+      </li>
+      <li>
+        <img class="responsive-img" src="images/juegos.jpg"> <!-- random image -->
+        <div class="caption left-align">
+          <h3>Nuevos juegos para niños</h3>
+          <h5 class="light white-text text-lighten-3">Renovación antiguos juegos oxidados, por juegos nuevos.</h5>
+        </div>
+      </li>
+      <li>
+        <img class="responsive-img" src="images/luz.jpg"> <!-- random image -->
+        <div class="caption right-align">
+          <h3>Nueva luminaria pública</h3>
+          <h5 class="light white-text text-lighten-3">Cambio de antiguas ampolletas alogenas de alto consumo, por ampolletas led de bajo consumo.</h5>
+        </div>
+      </li>
+      <li>
+        <img class="responsive-img" src="images/pavimento.jpg"> <!-- random image -->
+        <div class="caption center-align">
+          <h3>Repavimentación de calles</h3>
+          <h5 class="light white-text text-lighten-3">Reparación de calles que se encontraban con hoyos y grietas.</h5>
+        </div>
+      </li>
+    </ul>
+  </div>
+  
+<div class="fixed-action-btn vertical click-to-toggle">
+    <a class="btn-floating btn-large red">
+      <i class="material-icons">menu</i>
+    </a>
+    <ul>
+      <li><a class="btn-floating red" title="postular un proyecto" href="/#!/crearproyecto"><i class="material-icons">local_post_office</i></a></li>
+      <li><a class="btn-floating yellow darken-1" href="/#!/aportes" title="Aportar a un proyecto"><i class="material-icons">monetization_on</i></a></li>
+      <li><a class="btn-floating green" title="Lista de proyectos" href="/#!/listaproyectos"><i class="material-icons">list</i></a></li>
+      <li><a class="btn-floating blue" title="Ingresar mi consumo historico" href="/#!/ingresoconsumo"><i class="material-icons">insert_invitation</i></a></li>
+      <li><a class="btn-floating green" title="Mi consumo historico" href="/#!/consumohistorico"><i class="material-icons">account_balance</i></a></li>
+      <li><a class="btn-floating blue" title="Informacion efficient home" href="/#!/efficienthome"><i class="material-icons">info</i></a></li>
+    </ul>
+  </div>
+  <div ng-repeat="a in usuarios">
+    {{a.idusuarios}}
+  </div>
+  <div ng-init="guardarID(a.idusuarios)"> </div>
+
+
+
+</div>
+</div>
